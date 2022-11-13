@@ -1,0 +1,127 @@
+* { 
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+    background-image: url('images/bg-desktop.svg');
+    background-color: var(--Violet);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+/* main  */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.images .logo img {
+    padding-bottom: 60px;
+    padding-top: 20px;
+}
+/* Mobile  */
+@media (max-width: 767px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        background-image: url('images/bg-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .images .logo img {
+        margin-top: 35px;
+        width: 200px;
+    }
+    .picture img {
+        width: 415px; 
+    }
+    .link ul {
+        text-align: center;
+        margin-top: 15%;
+    }
+}
+/* end main  */
+/* text  */
+.text h1 {
+    width: 450px;
+    font-size: 40px;
+    line-height: 1.4;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.text p {
+    line-height: 1.7;
+    font-size: 15px;
+    width: 430px;
+    padding-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .text {
+        text-align: center;
+    }
+    .text h1 { 
+        font-size: 37px;
+    }
+    .text p { 
+        margin: 10px 80px;
+        width: 287px;
+        text-align: center;
+        line-height: 1.8;
+    }
+    button {
+        width: 235px;
+    }
+}
+/* end text  */
+/* button  */
+button {
+    padding: 18px 60px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    font-size: 15px;
+    box-shadow: 0 0 16px 0 #333;
+}
+button:hover {
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+}
+/* links  */
+.link { 
+    text-align: right;
+    position: relative;
+    bottom: -178px;
+}
+.link ul li {
+    display: inline-flex;
+
+}
+.link ul li i {
+    color: #fff;
+    border: 2px solid #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
+    transition-duration: 0.2s;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link ul li i:hover {
+    cursor: pointer;
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+}
